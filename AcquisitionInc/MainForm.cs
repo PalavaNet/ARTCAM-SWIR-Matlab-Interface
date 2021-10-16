@@ -40,19 +40,13 @@ namespace AcquisitionInc
 
             m_CArtCam.Release();
 
-            //if (m_Bitmap != null)
-            //{
-            //    m_Bitmap.Dispose();
-            //    m_Bitmap = null;
-            //}
+            if (m_Bitmap != null)
+            {
+                m_Bitmap.Dispose();
+                m_Bitmap = null;
+            }
 
-            //m_PreviewMode = -1;
-            //timer1.Enabled = false;
-            //timerRec.Enabled = false;
-            //m_SaveFlg = false;
-            //m_StopFlg = false;
             m_CArtCam.FreeLibrary();
-
         }
 
         private void ConnectButton_Click(object sender, EventArgs e)
