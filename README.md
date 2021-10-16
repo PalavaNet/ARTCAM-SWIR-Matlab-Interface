@@ -9,7 +9,7 @@ Matlab code for running the ARTCAM-SWIR990-TEC from Artray
 ## Notes on the Artray Samples
 
 - The code samples that are on the website are pretty decent. I'd recommend using the **C#** ones. 
-  - If you would really rather not, then look at [this documentation](/Documentation/ARTCCM-SDK-MANUAL-TNIR-V1300_EN.pdf)
+  - If you would really rather use C then look at [this documentation](/Documentation/ARTCCM-SDK-MANUAL-TNIR-V1300_EN.pdf)
 - C# is one of the **.NET** languages, a bunch of languages Microsoft uses, for developing on Windows systems. 
 - These samples use **WinForms** 
 - To run the samples, you need to copy the appropriate dll from the [SDK](/SDK) folder in the repo.
