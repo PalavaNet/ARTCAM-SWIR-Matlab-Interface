@@ -1,0 +1,13 @@
+//
+// Sample_MFC.RC2 - Resource which is not compiled directly by Microsoft Visual C++
+//
+
+#ifdef APSTUDIO_INVOKED
+#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add resource compiled by hand here
+
+/////////////////////////////////////////////////////////////////////////////

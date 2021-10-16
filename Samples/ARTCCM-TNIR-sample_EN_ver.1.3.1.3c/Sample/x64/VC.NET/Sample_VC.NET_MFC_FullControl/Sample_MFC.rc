@@ -1,0 +1,888 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// âpåÍ (ïƒçë) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\Sample_MFC.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard component\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Sample_MFC.ico"
+IDR_Sample_MFCTYPE      ICON                    "res\\Sample_MFCDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "File(&F)"
+    BEGIN
+        MENUITEM "Save(&S)",                    ID_FILE_SAVEIMAGE
+        MENUITEM "Recording(&R)",               ID_FILE_REC
+        MENUITEM SEPARATOR
+        MENUITEM "End(&E)",                     ID_FILE_EXIT
+    END
+    POPUP "Display(&V)"
+    BEGIN
+        MENUITEM "Preview(&P)",                 ID_SHOW_PREVIEW
+        MENUITEM "Callback(&B)",                ID_SHOW_CALLBACK
+        MENUITEM "Snapshot(&S)",                ID_SHOW_SNAPSHOT
+        MENUITEM "Capture(&C)",                 ID_SHOW_CAPTURE
+        MENUITEM "Trigger(&T)",                 ID_SHOW_TRIGGER
+        MENUITEM SEPARATOR
+        MENUITEM "Pause",                       ID_SHOW_STOP
+    END
+    POPUP "Settings(&S)"
+    BEGIN
+        MENUITEM "Format settings(&C)",         ID_SET_FORMAT
+        MENUITEM "Filter settings(&F)",         ID_SET_FILTER
+        MENUITEM "Analog settings(&A)",         ID_SET_ANALOG
+        MENUITEM SEPARATOR
+        MENUITEM "User size settings",          ID_SET_SIZE_APP
+        MENUITEM "User filter settings",        ID_SET_FILTER_APP
+        MENUITEM "User IO settings",            ID_SET_IO_APP
+        MENUITEM "User Monitor settings",       ID_SET_MONITOR_APP
+        MENUITEM "TNIR settings",               ID_SET_CORRECTION
+    END
+    POPUP "DLL(&L)"
+    BEGIN
+        MENUITEM "Reload",                      ID_DLL_RELOAD
+    END
+    POPUP "Device(&L)"
+    BEGIN
+        MENUITEM "1",                           ID_DEVICE01
+        MENUITEM "2",                           ID_DEVICE02
+        MENUITEM "3",                           ID_DEVICE03
+        MENUITEM "4",                           ID_DEVICE04
+        MENUITEM "5",                           ID_DEVICE05
+        MENUITEM "6",                           ID_DEVICE06
+        MENUITEM "7",                           ID_DEVICE07
+        MENUITEM "8",                           ID_DEVICE08
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Version information Sample_MFC"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Sample_MFC Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_SETFILTER DIALOGEX 0, 0, 356, 322
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Filter settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Picture filter",IDC_STATIC,7,7,134,136
+    LTEXT           "Brightness",IDC_STATIC,25,22,20,8
+    LTEXT           "Contrast",IDC_STATIC,25,42,34,8
+    LTEXT           "Hue",IDC_STATIC,25,62,17,8
+    LTEXT           "Saturation",IDC_STATIC,25,82,17,8
+    LTEXT           "Sharpness",IDC_STATIC,25,102,22,8
+    LTEXT           "Gumma",IDC_STATIC,25,122,20,8
+    EDITTEXT        IDE_BRIGHTNESS,69,20,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_CONTRAST,69,40,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_HUE,69,60,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_SATURATION,69,80,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_SHARPNESS,69,100,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_GAMMA,69,120,50,12,ES_AUTOHSCROLL
+    CONTROL         "",IDS_BRIGHTNESS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,117,20,
+                    11,12
+    CONTROL         "",IDS_CONTRAST,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,117,40,
+                    11,12
+    CONTROL         "",IDS_HUE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,117,60,
+                    11,12
+    CONTROL         "",IDS_SATURATION,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,117,82,
+                    11,12
+    CONTROL         "",IDS_SHARPNESS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,117,100,
+                    11,12
+    CONTROL         "",IDS_GAMMA,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,117,120,
+                    11,12
+    GROUPBOX        "Camera settings",IDC_STATIC,153,7,196,136
+    LTEXT           "Global gain",IDC_STATIC,167,22,52,8
+    LTEXT           "Color gain(Red)",IDC_STATIC,167,42,54,8
+    LTEXT           "Color gain(Green 1)",IDC_STATIC,167,62,59,8
+    LTEXT           "Color gain(Green 2)",IDC_STATIC,167,82,59,8
+    LTEXT           "Color gain(Blue)",IDC_STATIC,167,102,54,8
+    LTEXT           "Exposure time (shutter speed)",IDC_STATIC,167,122,94,8
+    EDITTEXT        IDE_GLOBAL_GAIN,271,20,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_COLOR_GAIN_R,271,40,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_COLOR_GAIN_G1,271,60,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_COLOR_GAIN_G2,271,80,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_COLOR_GAIN_B,271,100,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_EXPOSURETIME,271,120,50,12,ES_AUTOHSCROLL
+    CONTROL         "",IDS_GLOBAL_GAIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,320,21,
+                    11,12
+    CONTROL         "",IDS_COLOR_GAIN_R,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,320,39,
+                    11,12
+    CONTROL         "",IDS_COLOR_GAIN_G1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,320,59,
+                    11,12
+    CONTROL         "",IDS_COLOR_GAIN_G2,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,320,79,
+                    11,12
+    CONTROL         "",IDS_COLOR_GAIN_B,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,320,99,
+                    11,12
+    CONTROL         "",IDS_EXPOSURETIME,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,320,120,
+                    11,12
+    GROUPBOX        "Color conversion",IDC_STATIC,7,150,134,165
+    CONTROL         "Auto white balance",IDC_AWB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,166,80,10
+    GROUPBOX        "Bayer conversion mode",IDC_STATIC,19,186,96,37
+    CONTROL         "",IDR_BAYER1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,27,
+                    202,8,8
+    CONTROL         "",IDR_BAYER2,"Button",BS_AUTORADIOBUTTON,47,202,8,8
+    CONTROL         "",IDR_BAYER3,"Button",BS_AUTORADIOBUTTON,67,202,8,8
+    CONTROL         "",IDR_BAYER4,"Button",BS_AUTORADIOBUTTON,87,202,8,8
+    GROUPBOX        "Bayer conversion gain",IDC_STATIC,19,229,96,76
+    LTEXT           "Red",IDC_STATIC,31,244,9,8
+    LTEXT           "Green",IDC_STATIC,31,264,9,8
+    LTEXT           "Blue",IDC_STATIC,31,284,9,8
+    EDITTEXT        IDE_BAYER_GAIN_R,51,242,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_BAYER_GAIN_G,51,262,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_BAYER_GAIN_B,51,282,50,12,ES_AUTOHSCROLL
+    CONTROL         "",IDS_BAYER_GAIN_R,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,101,242,
+                    11,12
+    CONTROL         "",IDS_BAYER_GAIN_G,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,101,262,
+                    11,12
+    CONTROL         "",IDS_BAYER_GAIN_B,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,101,282,
+                    11,12
+    GROUPBOX        "Auto iris",IDC_STATIC,153,150,90,66
+    CONTROL         "Invalid",IDR_AI1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    163,167,32,10
+    CONTROL         "Shutter",IDR_AI2,"Button",BS_AUTORADIOBUTTON,163,182,45,
+                    10
+    CONTROL         "Gain",IDR_AI3,"Button",BS_AUTORADIOBUTTON,163,197,35,10
+    GROUPBOX        "Mirror reversal",IDC_STATIC,153,222,90,38
+    CONTROL         "Vertical",IDC_MIRROR_V,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,163,238,24,10
+    CONTROL         "Horizon",IDC_MIRROR_H,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,199,238,24,10
+    CONTROL         "Half clock",IDC_HALFCLOCK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,163,269,56,10
+    DEFPUSHBUTTON   "Close",IDOK,299,301,50,14
+    GROUPBOX        "Display channel (CNV)",IDC_STATIC,252,150,97,66
+    CONTROL         "1",IDR_CHANNEL1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    263,170,20,10
+    CONTROL         "2",IDR_CHANNEL2,"Button",BS_AUTORADIOBUTTON,290,170,20,
+                    10
+    CONTROL         "3",IDR_CHANNEL3,"Button",BS_AUTORADIOBUTTON,317,170,20,
+                    10
+    CONTROL         "4",IDR_CHANNEL4,"Button",BS_AUTORADIOBUTTON,263,190,20,
+                    10
+    CONTROL         "5",IDR_CHANNEL5,"Button",BS_AUTORADIOBUTTON,290,190,20,
+                    10
+    CONTROL         "6",IDR_CHANNEL6,"Button",BS_AUTORADIOBUTTON,317,190,20,
+                    10
+END
+
+IDD_SETSIZE DIALOGEX 0, 0, 320, 276
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Size settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Size for taking in",IDC_STATIC,7,7,177,89
+    LTEXT           "Horizon",IDC_STATIC,80,18,9,8
+    LTEXT           "Vertical",IDC_STATIC,140,18,9,8
+    LTEXT           "Total pixels",IDC_STATIC,15,35,25,8
+    EDITTEXT        IDE_TH,61,33,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDE_TV,121,33,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Valid pixels",IDC_STATIC,15,55,33,8
+    EDITTEXT        IDE_EH,61,54,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDE_EV,121,54,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Starting point",IDC_STATIC,15,75,17,8
+    EDITTEXT        IDE_EHS,61,73,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDE_EVS,121,73,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Subsampling",IDC_STATIC,7,103,177,37
+    CONTROL         "1/1",IDR_SUBSAMPLE1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,20,118,27,10
+    CONTROL         "1/2",IDR_SUBSAMPLE2,"Button",BS_AUTORADIOBUTTON,55,118,
+                    27,10
+    CONTROL         "1/4",IDR_SUBSAMPLE4,"Button",BS_AUTORADIOBUTTON,90,118,
+                    27,10
+    CONTROL         "1/8",IDR_SUBSAMPLE8,"Button",BS_AUTORADIOBUTTON,125,118,
+                    27,10
+    GROUPBOX        "Color mode",IDC_STATIC,195,7,103,46
+    CONTROL         "8",IDR_COLOR8,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    208,20,20,10
+    CONTROL         "16",IDR_COLOR16,"Button",BS_AUTORADIOBUTTON,208,37,24,
+                    10
+    CONTROL         "24",IDR_COLOR24,"Button",BS_AUTORADIOBUTTON,238,20,24,
+                    10
+    CONTROL         "32",IDR_COLOR32,"Button",BS_AUTORADIOBUTTON,238,37,24,
+                    10
+    CONTROL         "48",IDR_COLOR48,"Button",BS_AUTORADIOBUTTON,268,20,24,
+                    10
+    CONTROL         "64",IDR_COLOR64,"Button",BS_AUTORADIOBUTTON,268,37,24,
+                    10
+    LTEXT           "Framerate (x10)",IDS_FPS,200,62,64,8
+    EDITTEXT        IDE_FPS,209,76,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Only for CNV",IDC_STATIC,7,149,182,119
+    LTEXT           "VideoFormat : ",IDS_VIDEO,33,162,83,8
+    GROUPBOX        "Sampling rate",IDC_STATIC,16,177,86,82
+    CONTROL         "Wide Hispeed",IDR_RATE_WH,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,23,193,59,10
+    CONTROL         "Wide Lowspeed",IDR_RATE_WL,"Button",BS_AUTORADIOBUTTON,
+                    23,208,66,10
+    CONTROL         "Normal Hispeed",IDR_RATE_NH,"Button",BS_AUTORADIOBUTTON,
+                    23,223,65,10
+    CONTROL         "Normal Lowspeed",IDR_RATE_NL,"Button",
+                    BS_AUTORADIOBUTTON,23,238,72,10
+    GROUPBOX        "Channel",IDC_STATIC,111,177,65,82
+    CONTROL         "1",IDR_CHANNEL1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    122,194,20,10
+    CONTROL         "2",IDR_CHANNEL2,"Button",BS_AUTORADIOBUTTON,122,214,20,
+                    10
+    CONTROL         "3",IDR_CHANNEL3,"Button",BS_AUTORADIOBUTTON,122,234,20,
+                    10
+    CONTROL         "4",IDR_CHANNEL4,"Button",BS_AUTORADIOBUTTON,147,194,20,
+                    10
+    CONTROL         "5",IDR_CHANNEL5,"Button",BS_AUTORADIOBUTTON,147,214,20,
+                    10
+    CONTROL         "6",IDR_CHANNEL6,"Button",BS_AUTORADIOBUTTON,148,234,20,
+                    10
+    GROUPBOX        "",IDC_STATIC,199,149,114,94
+    EDITTEXT        IDE_CODE1,212,163,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_CODE2,212,183,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_CODE3,212,203,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_CODE4,212,223,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_CODE5,261,163,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_CODE6,261,183,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_CODE7,261,203,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_CODE8,261,223,40,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Apply",IDOK,205,255,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,255,50,14
+    CONTROL         "Write sub-code",IDC_WRITECODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,206,149,76,10
+END
+
+IDD_SETIO DIALOGEX 0, 0, 200, 138
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "IO settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,143,117,50,14
+    CONTROL         "",IDC_IOR0,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,17,24,8,8
+    CONTROL         "",IDC_IOR1,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,32,24,8,8
+    CONTROL         "",IDC_IOR2,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,47,24,8,8
+    CONTROL         "",IDC_IOR3,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,62,24,8,8
+    CONTROL         "",IDC_IOR4,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,77,24,8,8
+    CONTROL         "",IDC_IOR5,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,92,24,8,8
+    CONTROL         "",IDC_IOR6,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,107,24,8,8
+    CONTROL         "",IDC_IOR7,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,122,24,8,8
+    GROUPBOX        "Register for reading",IDC_STATIC,7,7,135,40
+    GROUPBOX        "Register for writing",IDC_STATIC,7,58,135,40
+    CONTROL         "",IDC_IOW0,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,17,76,8,8
+    CONTROL         "",IDC_IOW1,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,32,76,8,8
+    CONTROL         "",IDC_IOW2,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,47,76,8,8
+    CONTROL         "",IDC_IOW3,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,62,76,8,8
+    CONTROL         "",IDC_IOW4,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,77,76,8,8
+    CONTROL         "",IDC_IOW5,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,92,76,8,8
+    CONTROL         "",IDC_IOW6,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,107,76,8,8
+    CONTROL         "",IDC_IOW7,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,122,76,8,8
+    PUSHBUTTON      "Read",IDB_READ,153,7,40,40,WS_DISABLED
+    PUSHBUTTON      "Write",IDB_WRITE,153,58,40,40,WS_DISABLED
+END
+
+IDD_SETMONITOR DIALOGEX 0, 0, 394, 276
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Working mode settings",IDC_STATIC,7,7,189,86
+    CONTROL         "Live",IDC_LIVE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,17,19,55,12
+    PUSHBUTTON      "Snapshot",IDB_SNAPSHOT,80,19,56,12
+    COMBOBOX        IDC_SIZE2,240,169,110,41,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_SENSOR,77,37,85,41,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Color",IDC_COLOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    16,54,34,10
+    CONTROL         "Auto white balance",IDC_AWB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,67,82,10
+    CONTROL         "AWB Fix",IDC_AWB_LOCK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,78,32,10
+    GROUPBOX        "Bayer",IDC_STATIC,7,95,188,63
+    LTEXT           "R Gain",IDC_STATIC,16,110,26,8
+    CONTROL         "",IDS_R_GAIN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,56,109,90,10
+    EDITTEXT        IDE_R_GAIN,151,108,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_R_GAIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,108,
+                    11,11
+    LTEXT           "G Gain",IDC_STATIC,16,125,26,8
+    CONTROL         "",IDS_G_GAIN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,56,124,90,10
+    EDITTEXT        IDE_G_GAIN,151,123,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_G_GAIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,123,
+                    11,11
+    LTEXT           "B Gain",IDC_STATIC,16,140,26,8
+    CONTROL         "",IDS_B_GAIN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,56,139,90,10
+    EDITTEXT        IDE_B_GAIN,151,138,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_B_GAIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,138,
+                    11,11
+    GROUPBOX        "Camera controll",IDC_CCAMERA,7,163,187,85
+    LTEXT           "Global Gain",IDC_STATIC,14,178,20,8
+    CONTROL         "",IDS_MGLOBALGAIN,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,57,178,90,10
+    EDITTEXT        IDE_MGLOBALGAIN,153,177,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_MGLOBALGAIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,176,178,
+                    11,11
+    LTEXT           "Shutter Width",IDC_STATIC,14,193,23,8
+    CONTROL         "",IDS_MSHUTTERWIDTH,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,57,193,90,10
+    EDITTEXT        IDE_MSHUTTERWIDTH,153,192,35,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "",IDSP_MSHUTTERWIDTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,176,192,
+                    11,11
+    CONTROL         "Vertical mirror",IDC_VFLIP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,208,69,11
+    CONTROL         "Auto exposure",IDC_M_AUTOEXPOSURE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,223,85,8
+    CONTROL         "Auto gain",IDC_M_AUTOGAIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,236,70,8
+    GROUPBOX        "Cross cursor settings",IDC_STATIC,200,7,184,133
+    CONTROL         "Cursor1",IDC_SEL_CURSOR1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,208,18,55,10
+    CONTROL         "Cursor2",IDC_SEL_CURSOR2,"Button",BS_AUTORADIOBUTTON,
+                    288,18,55,10
+    CONTROL         "Cross cursor on",IDC_CURSOR_ON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,209,32,79,11
+    LTEXT           "X Pos",IDC_STATIC,209,48,18,8
+    CONTROL         "",IDS_XPOS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,242,47,90,10
+    EDITTEXT        IDE_XPOS,337,47,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_XPOS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,364,47,
+                    11,11
+    LTEXT           "Y Pos",IDC_STATIC,209,62,18,8
+    CONTROL         "",IDS_YPOS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,242,62,90,10
+    EDITTEXT        IDE_YPOS,337,61,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_YPOS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,364,61,
+                    11,11
+    LTEXT           "X Size",IDC_STATIC,209,77,20,8
+    CONTROL         "",IDS_C_SIZEX,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,242,76,90,10
+    EDITTEXT        IDE_C_SIZEX,337,76,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_C_SIZEX,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,364,76,
+                    11,11
+    LTEXT           "Y Size",IDC_STATIC,209,94,20,8
+    CONTROL         "",IDS_C_SIZEY,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,242,93,90,10
+    EDITTEXT        IDE_C_SIZEY,337,93,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_C_SIZEY,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,364,93,
+                    11,11
+    PUSHBUTTON      "Write",IDC_WRITE,103,251,91,19
+    PUSHBUTTON      "Initialize Monitor setting",IDC_INIT_MON,14,251,79,19
+    DEFPUSHBUTTON   "OK",IDOK,206,256,50,14
+    PUSHBUTTON      "Default",IDB_DEFAULT,266,256,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,322,256,50,14
+    LTEXT           "Working clock",IDC_STATIC,29,39,38,8
+    GROUPBOX        "Monitor size settings",IDC_STATIC,201,150,183,44
+    LTEXT           "Resolution",IDC_STATIC,209,172,28,8
+    EDITTEXT        IDE_AI_MIN,153,213,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_AI_MIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,176,213,
+                    11,11
+    EDITTEXT        IDE_AI_MAX,153,230,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_AI_MAX,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,176,230,
+                    11,11
+    LTEXT           "Luminance Min",IDC_STATIC,117,215,34,8
+    LTEXT           "Luminance Max",IDC_STATIC,117,231,34,8
+    CONTROL         "",IDC_C_COLOR,"Static",SS_BLACKFRAME,288,114,39,18
+    LTEXT           "Change cursor color",IDC_STATIC,211,120,60,10
+END
+
+IDD_SETCORRECTION DIALOGEX 0, 0, 295, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Correction setting"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,219,135,56,17
+    PUSHBUTTON      "Register(dark)",IDC_UPDATE_LOW,41,74,57,16
+    PUSHBUTTON      "Register(bright)",IDC_UPDATE_HIGH,119,74,57,16
+    PUSHBUTTON      "Save",IDC_SAVE_MASK,41,102,57,16
+    PUSHBUTTON      "Load",IDC_LOAD_MASK,119,102,57,16
+    CONTROL         "Effective mask correction",IDC_CORRECTION_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,45,37,97,10
+    CONTROL         "Effective pixel correction",IDC_DOTFILTER_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,45,50,95,10
+    GROUPBOX        "Correction",IDC_STATIC,20,16,256,112
+END
+
+IDD_SETMONITOR2 DIALOGEX 0, 0, 394, 209
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Working mode settings",IDC_STATIC,7,7,189,35
+    CONTROL         "Color",IDC_COLOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    18,22,34,10
+    CONTROL         "Auto white balance",IDC_AWB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,66,22,82,10
+    GROUPBOX        "Bayer conversion",IDC_STATIC,7,46,188,63
+    LTEXT           "R gain",IDC_STATIC,16,61,26,8
+    CONTROL         "",IDS_R_GAIN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,56,60,90,10
+    EDITTEXT        IDE_R_GAIN,151,59,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_R_GAIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,59,
+                    11,11
+    LTEXT           "G gain",IDC_STATIC,16,76,26,8
+    CONTROL         "",IDS_G_GAIN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,56,75,90,10
+    EDITTEXT        IDE_G_GAIN,151,74,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_G_GAIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,74,
+                    11,11
+    LTEXT           "B gain",IDC_STATIC,16,91,26,8
+    CONTROL         "",IDS_B_GAIN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,56,90,90,10
+    EDITTEXT        IDE_B_GAIN,151,89,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_B_GAIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,89,
+                    11,11
+    GROUPBOX        "Camera controll",IDC_CCAMERA,7,114,187,66
+    LTEXT           "Global Gain",IDC_STATIC,14,129,36,8
+    CONTROL         "",IDS_MGLOBALGAIN,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,57,129,90,10
+    EDITTEXT        IDE_MGLOBALGAIN,153,128,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_MGLOBALGAIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,176,129,
+                    11,11
+    LTEXT           "Shutter",IDC_STATIC,14,144,36,8
+    CONTROL         "",IDS_MSHUTTERWIDTH,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,57,144,90,10
+    EDITTEXT        IDE_MSHUTTERWIDTH,153,143,35,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "",IDSP_MSHUTTERWIDTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,176,143,
+                    11,11
+    CONTROL         "Vertical mirror",IDC_VFLIP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,159,69,11
+    CONTROL         "Horizontal mirror",IDC_HFLIP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,108,159,69,11
+    GROUPBOX        "Cross cursor settings",IDC_STATIC,200,7,184,133
+    CONTROL         "Cursor1",IDC_SEL_CURSOR1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,208,18,55,10
+    CONTROL         "Cursor2",IDC_SEL_CURSOR2,"Button",BS_AUTORADIOBUTTON,
+                    288,18,55,10
+    CONTROL         "Cross cursor on",IDC_CURSOR_ON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,209,32,79,11
+    LTEXT           "X Pos",IDC_STATIC,209,48,18,8
+    CONTROL         "",IDS_XPOS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,242,47,90,10
+    EDITTEXT        IDE_XPOS,337,47,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_XPOS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,364,47,
+                    11,11
+    LTEXT           "Y Pos",IDC_STATIC,209,62,18,8
+    CONTROL         "",IDS_YPOS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,242,62,90,10
+    EDITTEXT        IDE_YPOS,337,61,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_YPOS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,364,61,
+                    11,11
+    LTEXT           "X Size",IDC_STATIC,209,77,20,8
+    CONTROL         "",IDS_C_SIZEX,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,242,76,90,10
+    EDITTEXT        IDE_C_SIZEX,337,76,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_C_SIZEX,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,364,76,
+                    11,11
+    LTEXT           "Y Size",IDC_STATIC,209,94,20,8
+    CONTROL         "",IDS_C_SIZEY,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,242,93,90,10
+    EDITTEXT        IDE_C_SIZEY,337,93,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDSP_C_SIZEY,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,364,93,
+                    11,11
+    PUSHBUTTON      "Write",IDC_WRITE,103,186,91,19
+    PUSHBUTTON      "Initialize setting",IDC_INIT_MON,14,186,79,19
+    DEFPUSHBUTTON   "OK",IDOK,206,191,50,14
+    PUSHBUTTON      "Default",IDB_DEFAULT,266,191,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,322,191,50,14
+    CONTROL         "",IDC_C_COLOR,"Static",SS_BLACKFRAME,210,114,162,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,3,0,2
+ PRODUCTVERSION 1,3,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041103a4"
+        BEGIN
+            VALUE "CompanyName", "Artray Co., Ltd."
+            VALUE "FileDescription", "Sample_MFC.EXE"
+            VALUE "FileVersion", "1.3.0.2"
+            VALUE "InternalName", "Sample_MFC.EXE"
+            VALUE "LegalCopyright", "Artray Co., Ltd.  All rights reserved."
+            VALUE "OriginalFilename", "Sample_MFC.EXE"
+            VALUE "ProductName", "Sample_MFC.EXE"
+            VALUE "ProductVersion", "1.3.0.2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SETFILTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 349
+        VERTGUIDE, 115
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 315
+    END
+
+    IDD_SETSIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 269
+    END
+
+    IDD_SETIO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_SETMONITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 384
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 270
+    END
+
+    IDD_SETCORRECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_SETMONITOR2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Sample_MFC\n\nSample_MFC\n\n\nSampleMFC.Document\nSample_MFC.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Sample_MFC"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "Overwrite"
+    ID_INDICATOR_REC        "Record"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create new file. /nnewfile"
+    ID_FILE_OPEN            "Open an existing file. /nopen"
+    ID_FILE_CLOSE           "Close the working file. /nclose"
+    ID_FILE_SAVE            "Overwrite the file and save. /nsave"
+    ID_FILE_SAVE_AS         "Save the file in different name. /nsave as"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version and copyright. /nversioninfo"
+    ID_APP_EXIT             "Finish application and direct file saving. //end"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open appointed file"
+    ID_FILE_MRU_FILE2       "Open appointed file"
+    ID_FILE_MRU_FILE3       "Open appointed file"
+    ID_FILE_MRU_FILE4       "Open appointed file"
+    ID_FILE_MRU_FILE5       "Open appointed file"
+    ID_FILE_MRU_FILE6       "Open appointed file"
+    ID_FILE_MRU_FILE7       "Open appointed file"
+    ID_FILE_MRU_FILE8       "Open appointed file"
+    ID_FILE_MRU_FILE9       "Open appointed file"
+    ID_FILE_MRU_FILE10      "Open appointed file"
+    ID_FILE_MRU_FILE11      "Open appointed file"
+    ID_FILE_MRU_FILE12      "Open appointed file"
+    ID_FILE_MRU_FILE13      "Open appointed file"
+    ID_FILE_MRU_FILE14      "Open appointed file"
+    ID_FILE_MRU_FILE15      "Open appointed file"
+    ID_FILE_MRU_FILE16      "Open appointed file"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window. /nnext pane"
+    ID_PREV_PANE            "Switch to the previous window. /nprevious pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Seperate woring window. /nseperate"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Delete selected area. /ndelete"
+    ID_EDIT_CLEAR_ALL       "Delete all. /nclear all"
+    ID_EDIT_COPY            "Copy selected area and save to clipboard. /nsave"
+    ID_EDIT_CUT             "Cut selected area and save to clipboard. /ncut"
+    ID_EDIT_FIND            "Search for appointed letter string. /nsearch"
+    ID_EDIT_PASTE           "Paste content of clipboard. /npaste"
+    ID_EDIT_REPEAT          "Repeat the operation executed just before. /nrepeat"
+    ID_EDIT_REPLACE         "Replace the appoited letter string with different letter string. /nreplace"
+    ID_EDIT_SELECT_ALL      "Select all among file. /nselect all"
+    ID_EDIT_UNDO            "Undo. /nundo"
+    ID_EDIT_REDO            "Repeat. /nrepeat"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "Display/hide status bar. /n hide or display status bar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change window size"
+    AFX_IDS_SCMOVE          "Change position of window"
+    AFX_IDS_SCMINIMIZE      "Minimize window"
+    AFX_IDS_SCMAXIMIZE      "Maximize window"
+    AFX_IDS_SCNEXTWINDOW    "switch to next window"
+    AFX_IDS_SCPREVWINDOW    "switch to preceding"
+    AFX_IDS_SCCLOSE         "Close window and save changes."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Change the window to the standard size"
+    AFX_IDS_SCTASKLIST      "Active list of task"
+END
+
+#endif    // âpåÍ (ïƒçë) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\Sample_MFC.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard component
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
