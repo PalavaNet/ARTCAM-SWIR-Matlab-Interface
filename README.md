@@ -27,4 +27,5 @@ Matlab code for running the ARTCAM-SWIR990-TEC from Artray
   - This is the wrapper for using C#, the other languages have their own wrappers.
   - There is pretty much a one-to-one correspondance between the wrapper functions and the dll.
   - The wrapper defines an object that is passed around like a variable. The samples often call this `m_CArtCam` and you can call the member functions (in C#). For example, to set the exposure time you might write: `m_CArtCam.SetExposureTime((value_in_ms);`
+- On top of that is the program I've knocked together. It's super simple and will do the basics of your spec
 
